@@ -46,8 +46,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3 {
   font-family: var(--font-serif);
-  font-weight: 500;
-  line-height: 1.15;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.015em;
   margin: 0 0 1rem;
 }
 
@@ -307,8 +309,10 @@ a { color: inherit; }
 
 .intro-closing {
   font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.35rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.45;
+  letter-spacing: 0.015em;
   color: var(--ink);
   margin-top: 1.75rem;
 }
@@ -376,9 +380,10 @@ a { color: inherit; }
 
 .about-quote {
   font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
-  line-height: 1.4;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.45;
+  letter-spacing: 0.015em;
   color: var(--ink);
   border-left: 2px solid var(--gold);
   margin: 2rem 0 0;
@@ -413,8 +418,9 @@ a { color: inherit; }
 
 .signature-line {
   font-family: var(--font-serif);
-  font-style: italic;
+  font-weight: 600;
   font-size: 1.25rem;
+  letter-spacing: 0.015em;
   color: var(--ink);
   margin-top: 1.5rem;
 }
