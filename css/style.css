@@ -378,16 +378,38 @@ a { color: inherit; }
   align-items: center;
 }
 
+/* Kemerli görsel: sütuna hakim olmasın, çerçevesi tam görünsün */
+.about-media {
+  width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
+  padding: 0 14px 14px 0; /* altın çerçevenin taşma payı */
+}
+
+.about-media img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
 .about-quote {
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
-  line-height: 1.45;
+  line-height: 1.5;
   letter-spacing: 0.015em;
+  text-align: center;
   color: var(--ink);
-  border-left: 2px solid var(--gold);
-  margin: 2rem 0 0;
-  padding-left: 1.5rem;
+  border-block: 1px solid var(--gold);
+  padding: 1.6rem 1.25rem;
+  margin: 2.5rem 0 0;
+}
+
+.about-quote::before {
+  content: "\2726"; /* logodaki yıldız motifi */
+  display: block;
+  color: var(--gold);
+  font-size: 0.85rem;
+  margin-bottom: 0.9rem;
 }
 
 /* ---------- Koleksiyonlar ---------- */
