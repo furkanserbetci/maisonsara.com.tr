@@ -63,6 +63,11 @@ a { color: inherit; }
   padding-inline: clamp(1.25rem, 4vw, 2.5rem);
 }
 
+/* Çapa ile gelinen bölümler sabit header'ın altında kalmasın */
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
 /* Küçük büyük-harfli etiket (for little moments tarzı) */
 .eyebrow {
   font-family: var(--font-sans);
@@ -83,13 +88,26 @@ a { color: inherit; }
   height: var(--header-h);
   display: flex;
   align-items: center;
-  transition: background 0.35s ease, box-shadow 0.35s ease;
+  transition: box-shadow 0.35s ease;
 }
 
-.site-header.scrolled {
+/* Buzlu cam zemin pseudo-öğede: header'ın kendisine backdrop-filter
+   verilirse fixed konumlu mobil menü header kutusuna hapsolur (containing block). */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(244, 240, 229, 0.92);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.site-header.scrolled::before { opacity: 1; }
+
+.site-header.scrolled {
   box-shadow: 0 1px 0 rgba(43, 38, 32, 0.08);
 }
 
@@ -659,15 +677,23 @@ a { color: inherit; }
   .site-nav {
     position: fixed;
     inset: 0;
+    z-index: 105;
     background: var(--cream);
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
     transform: translateY(-100%);
-    transition: transform 0.4s ease;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.4s ease, visibility 0s linear 0.4s;
   }
 
-  body.nav-open .site-nav { transform: none; }
+  body.nav-open .site-nav {
+    transform: none;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.4s ease;
+  }
   body.nav-open { overflow: hidden; }
 
   body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
