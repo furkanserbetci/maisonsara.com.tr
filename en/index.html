@@ -6,7 +6,9 @@
   <title>Maison Sara | Baby &amp; Kids Store in Kahramanmaraş — Clothing, Toys</title>
   <meta name="description" content="Baby and kids clothing, toys, shoes and accessories in Kahramanmaraş. Gap, Djeco, Melissa &amp; Doug, BIBS and the world's beloved brands under one roof at Maison Sara.">
   <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#F4F0E5">
+  <script>document.documentElement.classList.add("js");</script>
 
   <link rel="canonical" href="https://maisonsara.com.tr/en/">
   <link rel="alternate" hreflang="tr" href="https://maisonsara.com.tr/">
@@ -33,22 +35,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Store",
+    "@type": ["Store", "LocalBusiness"],
     "name": "Maison Sara",
     "slogan": "for little moments",
     "description": "Baby and kids clothing, toy, shoe and accessory store in Kahramanmaraş. The world's beloved brands under one roof.",
     "image": "https://maisonsara.com.tr/img/og-image.jpg",
+    "logo": "https://maisonsara.com.tr/img/logo.png",
     "url": "https://maisonsara.com.tr/en/",
     "sameAs": ["https://www.instagram.com/maisonsara.kids/"],
     "email": "destek@maisonsara.co",
     "priceRange": "₺₺",
     "keywords": "baby store, kids clothing, toys, baby shoes, Kahramanmaraş",
+    "areaServed": "Kahramanmaraş",
+    "currenciesAccepted": "TRY",
+    "paymentAccepted": "Cash, Credit Card",
     "hasMap": "https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+14041.+Sokak+No%3A43AB+Oniki%C5%9Fubat+Kahramanmara%C5%9F",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.59862,
+      "longitude": 36.84866
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Cumhuriyet Mahallesi 14041. Sokak No:43AB",
       "addressLocality": "Onikişubat",
       "addressRegion": "Kahramanmaraş",
+      "postalCode": "46050",
       "addressCountry": "TR"
     },
     "openingHoursSpecification": {
@@ -60,24 +72,68 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where is Maison Sara?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Our store is located at Cumhuriyet Mahallesi 14041. Sokak No:43AB, Onikişubat / Kahramanmaraş. We are open Monday–Saturday, 10:00–19:00." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which brands can I find?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We bring together the world's beloved baby and kids brands under one roof, including Gap, Mini Melissa, Djeco, Melissa & Doug, Battat, Trixie, BIBS, Mimi & Lula, Classic World and Floss & Rock." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you sell toys?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes; our toy collection ranges from wooden toys and educational games to art activities and pretend play." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which age groups do you cover?",
+        "acceptedAnswer": { "@type": "Answer", "text": "From newborns to school age; a wide range spanning baby and kids clothing, shoes, feeding essentials, toys and accessories." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help me choose a gift?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Of course; our team is happy to help you choose the right gift for any age and budget in store." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you sell online?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We currently serve only from our store in Onikişubat, Kahramanmaraş. You can browse our products on Instagram (@maisonsara.kids) and reach us with any questions." }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Jost:wght@300;400&amp;display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#top">Skip to content</a>
+
   <header class="site-header">
     <div class="container">
       <a class="brand" href="#top" aria-label="Maison Sara — home">
-        <img src="../img/logo-bear.png" alt="" width="40" height="46">
+        <picture>
+          <source srcset="../img/logo-bear.webp" type="image/webp">
+          <img src="../img/logo-bear.png" alt="" width="40" height="46">
+        </picture>
         <span>Maison Sara</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
-      <nav class="site-nav" aria-label="Main menu">
+      <nav class="site-nav" id="site-nav" aria-label="Main menu">
         <a href="#about">About</a>
         <a href="#collections">Collections</a>
         <a href="#brands">Brands</a>
@@ -92,8 +148,12 @@
     <!-- ========== HERO ========== -->
     <section class="hero">
       <div class="hero-panel">
-        <img class="hero-logo" src="../img/logo.png" alt="Maison Sara — for little moments" width="760" height="529">
+        <picture>
+          <source srcset="../img/logo.webp" type="image/webp">
+          <img class="hero-logo" src="../img/logo.png" alt="Maison Sara — for little moments" width="760" height="529">
+        </picture>
         <h1>Thoughtfully curated collections for childhood&rsquo;s most beautiful moments.</h1>
+        <p class="hero-sub">Baby &amp; kids clothing, toys and accessories in Kahramanmaraş</p>
         <p class="hero-lead">Maison Sara is a curated lifestyle store bringing the world&rsquo;s most beloved baby and kids brands together under one roof in Kahramanmaraş.</p>
         <div class="hero-cta">
           <a class="btn btn-solid" href="#collections">Explore the Collections</a>
@@ -101,11 +161,15 @@
         </div>
       </div>
       <div class="hero-media">
-        <img src="../img/hero-1600.jpg"
-             srcset="../img/hero-800.jpg 800w, ../img/hero-1600.jpg 1600w, ../img/hero-2400.jpg 2400w"
-             sizes="(max-width: 767px) 100vw, 55vw"
-             alt="The pastel-toned interior of the Maison Sara store"
-             width="1600" height="1200" fetchpriority="high">
+        <picture>
+          <source srcset="../img/hero-800.webp 800w, ../img/hero-1600.webp 1600w, ../img/hero-2400.webp 2400w"
+                  sizes="(max-width: 767px) 100vw, 55vw" type="image/webp">
+          <img src="../img/hero-1600.jpg"
+               srcset="../img/hero-800.jpg 800w, ../img/hero-1600.jpg 1600w, ../img/hero-2400.jpg 2400w"
+               sizes="(max-width: 767px) 100vw, 55vw"
+               alt="The pastel-toned interior of the Maison Sara store"
+               width="1600" height="1200" fetchpriority="high">
+        </picture>
       </div>
     </section>
 
@@ -126,11 +190,15 @@
     <section class="section section-alt" id="about">
       <div class="container about-grid">
         <div class="about-media framed arch reveal">
-          <img src="../img/about-900.jpg"
-               srcset="../img/about-900.jpg 900w, ../img/about-1400.jpg 1400w"
-               sizes="(max-width: 767px) 90vw, 440px"
-               alt="A Maison Sara gift bag on the glass display counter"
-               width="900" height="1125" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="../img/about-900.webp 900w, ../img/about-1400.webp 1400w"
+                    sizes="(max-width: 767px) 90vw, 440px" type="image/webp">
+            <img src="../img/about-900.jpg"
+                 srcset="../img/about-900.jpg 900w, ../img/about-1400.jpg 1400w"
+                 sizes="(max-width: 767px) 90vw, 440px"
+                 alt="A Maison Sara gift bag on the glass display counter"
+                 width="900" height="1125" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="reveal" style="--reveal-delay: 0.15s">
           <span class="eyebrow">About Us</span>
@@ -154,11 +222,15 @@
         <!-- Toys -->
         <div class="collection-row" data-accent="sage">
           <div class="collection-media framed reveal">
-            <img src="../img/toys-1600.jpg"
-                 srcset="../img/toys-800.jpg 800w, ../img/toys-1600.jpg 1600w"
-                 sizes="(max-width: 767px) 100vw, 50vw"
-                 alt="Educational toys on wooden wall shelves"
-                 width="1600" height="1200" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="../img/toys-800.webp 800w, ../img/toys-1600.webp 1600w"
+                      sizes="(max-width: 767px) 100vw, 50vw" type="image/webp">
+              <img src="../img/toys-1600.jpg"
+                   srcset="../img/toys-800.jpg 800w, ../img/toys-1600.jpg 1600w"
+                   sizes="(max-width: 767px) 100vw, 50vw"
+                   alt="Educational toys on wooden wall shelves"
+                   width="1600" height="1200" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="collection-text reveal" style="--reveal-delay: 0.15s">
             <span class="eyebrow">Toy Collection</span>
@@ -166,6 +238,7 @@
             <p>Our toy collection brings together distinguished brands that nurture imagination, support problem-solving skills and are made from safe materials.</p>
             <p>From wooden toys to educational games, from art activities to pretend play, every piece is chosen to support children&rsquo;s development.</p>
             <p class="signature-line">Quality play makes a happy childhood.</p>
+            <a class="collection-link" href="../oyuncak/" hreflang="tr">Explore the Toy Collection (TR)</a>
           </div>
         </div>
 
@@ -173,16 +246,23 @@
         <div class="collection-row flip" data-accent="blush">
           <div class="collection-media collage reveal">
             <div class="collage-main">
-              <img src="../img/girls-1600.jpg"
-                   srcset="../img/girls-800.jpg 800w, ../img/girls-1600.jpg 1600w"
-                   sizes="(max-width: 767px) 100vw, 50vw"
-                   alt="Tulle dresses in the pink-drawer girls' section"
-                   width="1600" height="1200" loading="lazy" decoding="async">
+              <picture>
+                <source srcset="../img/girls-800.webp 800w, ../img/girls-1600.webp 1600w"
+                        sizes="(max-width: 767px) 100vw, 50vw" type="image/webp">
+                <img src="../img/girls-1600.jpg"
+                     srcset="../img/girls-800.jpg 800w, ../img/girls-1600.jpg 1600w"
+                     sizes="(max-width: 767px) 100vw, 50vw"
+                     alt="Tulle dresses in the pink-drawer girls' section"
+                     width="1600" height="1200" loading="lazy" decoding="async">
+              </picture>
             </div>
             <div class="collage-overlay">
-              <img src="../img/boys-800.jpg"
-                   alt="The baby and boys' clothing section"
-                   width="800" height="600" loading="lazy" decoding="async">
+              <picture>
+                <source srcset="../img/boys-800.webp" type="image/webp">
+                <img src="../img/boys-800.jpg"
+                     alt="The baby and boys' clothing section"
+                     width="800" height="600" loading="lazy" decoding="async">
+              </picture>
             </div>
           </div>
           <div class="collection-text reveal" style="--reveal-delay: 0.15s">
@@ -228,6 +308,42 @@
       </div>
     </section>
 
+    <!-- ========== FAQ ========== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="faq-head reveal">
+          <span class="eyebrow">Frequently Asked Questions</span>
+          <h2 class="section-title">Good to Know</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>Where is Maison Sara?</summary>
+            <p>Our store is located at Cumhuriyet Mahallesi 14041. Sokak No:43AB, Onikişubat / Kahramanmaraş. We are open Monday&ndash;Saturday, 10:00&ndash;19:00.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which brands can I find?</summary>
+            <p>We bring together the world&rsquo;s beloved baby and kids brands under one roof, including Gap, Mini Melissa, Djeco, Melissa &amp; Doug, Battat, Trixie, BIBS, Mimi &amp; Lula, Classic World and Floss &amp; Rock.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you sell toys?</summary>
+            <p>Yes; our toy collection ranges from wooden toys and educational games to art activities and pretend play.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which age groups do you cover?</summary>
+            <p>From newborns to school age; a wide range spanning baby and kids clothing, shoes, feeding essentials, toys and accessories.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can you help me choose a gift?</summary>
+            <p>Of course; our team is happy to help you choose the right gift for any age and budget in store.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you sell online?</summary>
+            <p>We currently serve only from our store in Onikişubat, Kahramanmaraş. You can browse our products on Instagram (<a href="https://www.instagram.com/maisonsara.kids/" target="_blank" rel="noopener">@maisonsara.kids</a>) and reach us with any questions.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== VISIT ========== -->
     <section class="section visit" id="visit">
       <div class="container visit-grid">
@@ -261,12 +377,13 @@
         </div>
 
         <div class="visit-map reveal" style="--reveal-delay: 0.15s">
-          <iframe
-            src="https://maps.google.com/maps?q=Cumhuriyet%20Mahallesi%2014041.%20Sokak%20No%3A43AB%20Oniki%C5%9Fubat%20Kahramanmara%C5%9F&amp;z=16&amp;output=embed"
-            title="Maison Sara location — Google Maps"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen></iframe>
+          <button class="map-facade" type="button"
+                  data-map-src="https://maps.google.com/maps?q=Cumhuriyet%20Mahallesi%2014041.%20Sokak%20No%3A43AB%20Oniki%C5%9Fubat%20Kahramanmara%C5%9F&amp;z=16&amp;output=embed"
+                  data-map-title="Maison Sara location — Google Maps">
+            <span class="pin" aria-hidden="true">📍</span>
+            <span>View the Map</span>
+            <small>Cumhuriyet Mah. 14041. Sk. No:43AB, Onikişubat</small>
+          </button>
         </div>
       </div>
     </section>

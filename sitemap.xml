@@ -3,12 +3,22 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://maisonsara.com.tr/</loc>
+    <lastmod>2026-07-21</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://maisonsara.com.tr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://maisonsara.com.tr/en/"/>
   </url>
   <url>
     <loc>https://maisonsara.com.tr/en/</loc>
+    <lastmod>2026-07-21</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://maisonsara.com.tr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://maisonsara.com.tr/en/"/>
+  </url>
+  <url>
+    <loc>https://maisonsara.com.tr/cocuk-giyim/</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://maisonsara.com.tr/oyuncak/</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
 </urlset>

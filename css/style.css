@@ -11,9 +11,12 @@
   --ink-soft:   #6B6257;
   --blush:      #E9CBCE;
   --blush-deep: #D9A8AE;
+  --blush-text: #A66A72;  /* açık zeminde okunur pudra (WCAG AA) */
   --sage:       #B9C6B2;
   --sage-deep:  #93A68B;
-  --gold:       #B99A6B;
+  --sage-text:  #5F7256;  /* açık zeminde okunur adaçayı (WCAG AA) */
+  --gold:       #B99A6B;  /* çizgiler, dekor ve koyu zemin */
+  --gold-text:  #8A6E42;  /* açık zeminde okunur altın (WCAG AA) */
 
   /* Tipografi */
   --font-serif: "Cormorant Garamond", "Times New Roman", serif;
@@ -75,9 +78,38 @@ section[id] {
   font-size: 0.78rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   display: block;
   margin-bottom: 1.25rem;
+}
+
+/* Klavye kullanıcıları için içeriğe atlama linki */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 200;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 0.7rem 1.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus { top: 0; }
+
+/* Klavye odağı */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.visit :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--cream);
 }
 
 /* ---------- Header ---------- */
@@ -240,6 +272,15 @@ section[id] {
   width: 56px;
   height: 1px;
   background: var(--gold);
+}
+
+.hero-sub {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+  margin: -0.3rem 0 1.3rem;
 }
 
 .hero-lead {
@@ -453,8 +494,8 @@ section[id] {
 
 .collection-text .eyebrow { margin-bottom: 0.9rem; }
 
-.collection-row[data-accent="sage"] .eyebrow { color: var(--sage-deep); }
-.collection-row[data-accent="blush"] .eyebrow { color: var(--blush-deep); }
+.collection-row[data-accent="sage"] .eyebrow { color: var(--sage-text); }
+.collection-row[data-accent="blush"] .eyebrow { color: var(--blush-text); }
 
 .signature-line {
   font-family: var(--font-serif);
@@ -473,6 +514,21 @@ section[id] {
   background: var(--gold);
   margin-bottom: 1rem;
 }
+
+.collection-link {
+  display: inline-block;
+  margin-top: 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.collection-link:hover { color: var(--gold-text); border-color: var(--gold-text); }
 
 /* Giyim kolajı */
 .collage {
@@ -593,6 +649,130 @@ section[id] {
   filter: grayscale(0.35) sepia(0.08);
 }
 
+/* Harita tıkla-yükle ön yüzü — iframe ancak istenince yüklenir */
+.map-facade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--cream-deep);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  font-family: var(--font-sans);
+  transition: background 0.25s ease;
+}
+
+.map-facade:hover { background: var(--cream); }
+
+.map-facade .pin {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.map-facade span {
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.map-facade small {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- SSS ---------- */
+.faq-head { text-align: center; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+.faq-head .section-title { margin-inline: auto; }
+
+.faq-list {
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(43, 38, 32, 0.15);
+}
+
+.faq-item summary {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.015em;
+  padding: 1.15rem 2.2rem 1.15rem 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: var(--gold-text);
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+
+.faq-item p {
+  color: var(--ink-soft);
+  margin: 0;
+  padding: 0 2.2rem 1.3rem 0;
+}
+
+/* ---------- Alt sayfalar ---------- */
+.page-hero {
+  padding: calc(var(--header-h) + clamp(3rem, 8vw, 5rem)) 0 clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: var(--gold-text);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover { text-decoration: underline; }
+
+.breadcrumb span { color: var(--ink-soft); }
+
+.page-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  max-width: 24ch;
+  margin-inline: auto;
+}
+
+.page-hero .hero-sub { margin-top: 0.5rem; }
+
+.prose {
+  max-width: 68ch;
+}
+
+.prose h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  margin-top: 2.5rem;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--ink);
@@ -638,19 +818,21 @@ section[id] {
 
 .footer-copy {
   font-size: 0.8rem;
-  color: rgba(244, 240, 229, 0.5);
+  color: rgba(244, 240, 229, 0.72);
   margin: 0;
 }
 
-/* ---------- Scroll reveal ---------- */
-.reveal {
+/* ---------- Scroll reveal ----------
+   Gizli başlangıç yalnızca JS çalışıyorsa (html.js) uygulanır;
+   JS kapalıyken içerik her zaman görünür. */
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
   transition-delay: var(--reveal-delay, 0s);
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
@@ -700,7 +882,7 @@ section[id] {
   body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
   body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-  .site-nav a { font-size: 1.05rem; }
+  .site-nav a { font-size: 1.05rem; padding-block: 0.7rem; }
 
   .hero {
     grid-template-columns: 1fr;
@@ -728,5 +910,12 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-media img { animation: none; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- Yazdırma ---------- */
+@media print {
+  .site-header, .nav-toggle, .visit-map, .hero-cta, .skip-link { display: none !important; }
+  .js .reveal { opacity: 1 !important; transform: none !important; }
+  body { background: #fff; color: #000; }
 }

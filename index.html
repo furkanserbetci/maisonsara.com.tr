@@ -6,7 +6,9 @@
   <title>Maison Sara | Kahramanmaraş Bebek &amp; Çocuk Mağazası — Giyim, Oyuncak</title>
   <meta name="description" content="Kahramanmaraş'ta bebek ve çocuk giyim, oyuncak, ayakkabı ve aksesuar. Gap, Djeco, Melissa &amp; Doug, BIBS ve dünyanın sevilen markaları Maison Sara'da tek çatı altında. Onikişubat.">
   <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#F4F0E5">
+  <script>document.documentElement.classList.add("js");</script>
 
   <link rel="canonical" href="https://maisonsara.com.tr/">
   <link rel="alternate" hreflang="tr" href="https://maisonsara.com.tr/">
@@ -33,22 +35,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Store",
+    "@type": ["Store", "LocalBusiness"],
     "name": "Maison Sara",
     "slogan": "for little moments",
     "description": "Kahramanmaraş'ta bebek ve çocuk giyim, oyuncak, ayakkabı ve aksesuar mağazası. Dünyanın sevilen markaları tek çatı altında.",
     "image": "https://maisonsara.com.tr/img/og-image.jpg",
+    "logo": "https://maisonsara.com.tr/img/logo.png",
     "url": "https://maisonsara.com.tr/",
     "sameAs": ["https://www.instagram.com/maisonsara.kids/"],
     "email": "destek@maisonsara.co",
     "priceRange": "₺₺",
     "keywords": "bebek mağazası, çocuk giyim, oyuncak, bebek ayakkabı, Kahramanmaraş",
+    "areaServed": "Kahramanmaraş",
+    "currenciesAccepted": "TRY",
+    "paymentAccepted": "Cash, Credit Card",
     "hasMap": "https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+14041.+Sokak+No%3A43AB+Oniki%C5%9Fubat+Kahramanmara%C5%9F",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.59862,
+      "longitude": 36.84866
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Cumhuriyet Mahallesi 14041. Sokak No:43AB",
       "addressLocality": "Onikişubat",
       "addressRegion": "Kahramanmaraş",
+      "postalCode": "46050",
       "addressCountry": "TR"
     },
     "openingHoursSpecification": {
@@ -60,24 +72,68 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Maison Sara nerede?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Mağazamız Cumhuriyet Mahallesi 14041. Sokak No:43AB, Onikişubat / Kahramanmaraş adresindedir. Pazartesi–Cumartesi 10.00–19.00 saatleri arasında açığız." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hangi markaları bulabilirim?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Gap, Mini Melissa, Djeco, Melissa & Doug, Battat, Trixie, BIBS, Mimi & Lula, Classic World ve Floss & Rock başta olmak üzere dünyanın sevilen bebek ve çocuk markalarını tek çatı altında sunuyoruz." }
+      },
+      {
+        "@type": "Question",
+        "name": "Oyuncak satıyor musunuz?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Evet; ahşap oyuncaklardan eğitici oyunlara, sanat aktivitelerinden rol yapma oyuncaklarına kadar geniş bir oyuncak koleksiyonumuz bulunuyor." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hangi yaş grupları için ürününüz var?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yenidoğandan okul çağına kadar; bebek ve çocuk giyiminden ayakkabıya, beslenme ürünlerinden oyuncak ve aksesuara uzanan geniş bir yelpazemiz var." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hediye seçiminde yardımcı oluyor musunuz?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Elbette; ekibimiz yaşa ve bütçenize uygun hediye seçiminde size mağazamızda memnuniyetle yardımcı olur." }
+      },
+      {
+        "@type": "Question",
+        "name": "Online satışınız var mı?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Şu an yalnızca Kahramanmaraş Onikişubat'taki mağazamızdan hizmet veriyoruz. Ürünlerimizi Instagram hesabımızdan (@maisonsara.kids) inceleyebilir, sorularınız için bize ulaşabilirsiniz." }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Jost:wght@300;400&amp;display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <a class="skip-link" href="#top">İçeriğe geç</a>
+
   <header class="site-header">
     <div class="container">
       <a class="brand" href="#top" aria-label="Maison Sara — ana sayfa">
-        <img src="img/logo-bear.png" alt="" width="40" height="46">
+        <picture>
+          <source srcset="img/logo-bear.webp" type="image/webp">
+          <img src="img/logo-bear.png" alt="" width="40" height="46">
+        </picture>
         <span>Maison Sara</span>
       </a>
-      <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
-      <nav class="site-nav" aria-label="Ana menü">
+      <nav class="site-nav" id="site-nav" aria-label="Ana menü">
         <a href="#hakkimizda">Hakkımızda</a>
         <a href="#koleksiyonlar">Koleksiyonlar</a>
         <a href="#markalar">Markalarımız</a>
@@ -92,8 +148,12 @@
     <!-- ========== HERO ========== -->
     <section class="hero">
       <div class="hero-panel">
-        <img class="hero-logo" src="img/logo.png" alt="Maison Sara — for little moments" width="760" height="529">
+        <picture>
+          <source srcset="img/logo.webp" type="image/webp">
+          <img class="hero-logo" src="img/logo.png" alt="Maison Sara — for little moments" width="760" height="529">
+        </picture>
         <h1>Çocukluğun en güzel anlarına eşlik edecek özenle seçilmiş koleksiyonlar.</h1>
+        <p class="hero-sub">Kahramanmaraş Onikişubat&rsquo;ta bebek &amp; çocuk giyim, oyuncak ve aksesuar</p>
         <p class="hero-lead">Maison Sara, bebek ve çocuklar için dünyanın sevilen markalarını Kahramanmaraş&rsquo;ta tek çatı altında buluşturan seçkin bir yaşam mağazasıdır.</p>
         <div class="hero-cta">
           <a class="btn btn-solid" href="#koleksiyonlar">Koleksiyonları Keşfedin</a>
@@ -101,11 +161,15 @@
         </div>
       </div>
       <div class="hero-media">
-        <img src="img/hero-1600.jpg"
-             srcset="img/hero-800.jpg 800w, img/hero-1600.jpg 1600w, img/hero-2400.jpg 2400w"
-             sizes="(max-width: 767px) 100vw, 55vw"
-             alt="Maison Sara Kahramanmaraş mağazasının pastel tonlardaki iç mekânı"
-             width="1600" height="1200" fetchpriority="high">
+        <picture>
+          <source srcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w"
+                  sizes="(max-width: 767px) 100vw, 55vw" type="image/webp">
+          <img src="img/hero-1600.jpg"
+               srcset="img/hero-800.jpg 800w, img/hero-1600.jpg 1600w, img/hero-2400.jpg 2400w"
+               sizes="(max-width: 767px) 100vw, 55vw"
+               alt="Maison Sara Kahramanmaraş mağazasının pastel tonlardaki iç mekânı"
+               width="1600" height="1200" fetchpriority="high">
+        </picture>
       </div>
     </section>
 
@@ -126,11 +190,15 @@
     <section class="section section-alt" id="hakkimizda">
       <div class="container about-grid">
         <div class="about-media framed arch reveal">
-          <img src="img/about-900.jpg"
-               srcset="img/about-900.jpg 900w, img/about-1400.jpg 1400w"
-               sizes="(max-width: 767px) 90vw, 440px"
-               alt="Cam vitrin üzerinde Maison Sara logolu hediye çantası"
-               width="900" height="1125" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="img/about-900.webp 900w, img/about-1400.webp 1400w"
+                    sizes="(max-width: 767px) 90vw, 440px" type="image/webp">
+            <img src="img/about-900.jpg"
+                 srcset="img/about-900.jpg 900w, img/about-1400.jpg 1400w"
+                 sizes="(max-width: 767px) 90vw, 440px"
+                 alt="Cam vitrin üzerinde Maison Sara logolu hediye çantası"
+                 width="900" height="1125" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="reveal" style="--reveal-delay: 0.15s">
           <span class="eyebrow">Hakkımızda</span>
@@ -154,11 +222,15 @@
         <!-- Oyuncaklar -->
         <div class="collection-row" data-accent="sage">
           <div class="collection-media framed reveal">
-            <img src="img/toys-1600.jpg"
-                 srcset="img/toys-800.jpg 800w, img/toys-1600.jpg 1600w"
-                 sizes="(max-width: 767px) 100vw, 50vw"
-                 alt="Ahşap duvar raflarında eğitici oyuncaklar"
-                 width="1600" height="1200" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="img/toys-800.webp 800w, img/toys-1600.webp 1600w"
+                      sizes="(max-width: 767px) 100vw, 50vw" type="image/webp">
+              <img src="img/toys-1600.jpg"
+                   srcset="img/toys-800.jpg 800w, img/toys-1600.jpg 1600w"
+                   sizes="(max-width: 767px) 100vw, 50vw"
+                   alt="Ahşap duvar raflarında eğitici oyuncaklar"
+                   width="1600" height="1200" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="collection-text reveal" style="--reveal-delay: 0.15s">
             <span class="eyebrow">Oyuncak Koleksiyonu</span>
@@ -166,6 +238,7 @@
             <p>Maison Sara&rsquo;daki oyuncak koleksiyonu; hayal gücünü geliştiren, problem çözme becerilerini destekleyen ve güvenli malzemelerden üretilen seçkin markalardan oluşur.</p>
             <p>Ahşap oyuncaklardan eğitici oyunlara, sanat aktivitelerinden rol yapma oyuncaklarına kadar her ürün çocukların gelişimini desteklemek amacıyla özenle seçilmektedir.</p>
             <p class="signature-line">Kaliteli oyun, mutlu çocukluk demektir.</p>
+            <a class="collection-link" href="oyuncak/">Oyuncak Koleksiyonunu İnceleyin</a>
           </div>
         </div>
 
@@ -173,23 +246,31 @@
         <div class="collection-row flip" data-accent="blush">
           <div class="collection-media collage reveal">
             <div class="collage-main">
-              <img src="img/girls-1600.jpg"
-                   srcset="img/girls-800.jpg 800w, img/girls-1600.jpg 1600w"
-                   sizes="(max-width: 767px) 100vw, 50vw"
-                   alt="Pembe çekmeceli bölümde tütülü kız çocuk elbiseleri"
-                   width="1600" height="1200" loading="lazy" decoding="async">
+              <picture>
+                <source srcset="img/girls-800.webp 800w, img/girls-1600.webp 1600w"
+                        sizes="(max-width: 767px) 100vw, 50vw" type="image/webp">
+                <img src="img/girls-1600.jpg"
+                     srcset="img/girls-800.jpg 800w, img/girls-1600.jpg 1600w"
+                     sizes="(max-width: 767px) 100vw, 50vw"
+                     alt="Pembe çekmeceli bölümde tütülü kız çocuk elbiseleri"
+                     width="1600" height="1200" loading="lazy" decoding="async">
+              </picture>
             </div>
             <div class="collage-overlay">
-              <img src="img/boys-800.jpg"
-                   alt="Bebek ve erkek çocuk giyim bölümü"
-                   width="800" height="600" loading="lazy" decoding="async">
+              <picture>
+                <source srcset="img/boys-800.webp" type="image/webp">
+                <img src="img/boys-800.jpg"
+                     alt="Bebek ve erkek çocuk giyim bölümü"
+                     width="800" height="600" loading="lazy" decoding="async">
+              </picture>
             </div>
           </div>
           <div class="collection-text reveal" style="--reveal-delay: 0.15s">
             <span class="eyebrow">Bebek &amp; Çocuk Giyim</span>
             <h3>Konfor ve şıklığın buluştuğu koleksiyonlar.</h3>
             <p>Doğal kumaşlar, kaliteli işçilik ve zamansız tasarımlarla hazırlanan giyim koleksiyonlarımız, çocukların özgürce hareket edebilmesi için tasarlanmıştır.</p>
-            <p>Günlük kullanım, özel günler ve mevsim geçişleri için özenle seçilen parçalarla hem stil sahibi hem de rahat kombinler oluşturabilirsiniz.</p>
+            <p>Günlük kullanım, özel günler ve mevsim geçişleri için özenle seçilen parçalarla hem stil sahibi hem de rahat kombinler oluşturabilirsiniz. Tüm koleksiyonlarımızı Onikişubat&rsquo;taki mağazamızda yakından inceleyebilirsiniz.</p>
+            <a class="collection-link" href="cocuk-giyim/">Giyim Koleksiyonunu İnceleyin</a>
           </div>
         </div>
       </div>
@@ -228,6 +309,42 @@
       </div>
     </section>
 
+    <!-- ========== SSS ========== -->
+    <section class="section" id="sss">
+      <div class="container">
+        <div class="faq-head reveal">
+          <span class="eyebrow">Sıkça Sorulan Sorular</span>
+          <h2 class="section-title">Merak Ettikleriniz</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>Maison Sara nerede?</summary>
+            <p>Mağazamız Cumhuriyet Mahallesi 14041. Sokak No:43AB, Onikişubat / Kahramanmaraş adresindedir. Pazartesi&ndash;Cumartesi 10.00&ndash;19.00 saatleri arasında açığız.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Hangi markaları bulabilirim?</summary>
+            <p>Gap, Mini Melissa, Djeco, Melissa &amp; Doug, Battat, Trixie, BIBS, Mimi &amp; Lula, Classic World ve Floss &amp; Rock başta olmak üzere dünyanın sevilen bebek ve çocuk markalarını tek çatı altında sunuyoruz.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Oyuncak satıyor musunuz?</summary>
+            <p>Evet; ahşap oyuncaklardan eğitici oyunlara, sanat aktivitelerinden rol yapma oyuncaklarına kadar geniş bir oyuncak koleksiyonumuz bulunuyor.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Hangi yaş grupları için ürününüz var?</summary>
+            <p>Yenidoğandan okul çağına kadar; bebek ve çocuk giyiminden ayakkabıya, beslenme ürünlerinden oyuncak ve aksesuara uzanan geniş bir yelpazemiz var.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Hediye seçiminde yardımcı oluyor musunuz?</summary>
+            <p>Elbette; ekibimiz yaşa ve bütçenize uygun hediye seçiminde size mağazamızda memnuniyetle yardımcı olur.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Online satışınız var mı?</summary>
+            <p>Şu an yalnızca Kahramanmaraş Onikişubat&rsquo;taki mağazamızdan hizmet veriyoruz. Ürünlerimizi Instagram hesabımızdan (<a href="https://www.instagram.com/maisonsara.kids/" target="_blank" rel="noopener">@maisonsara.kids</a>) inceleyebilir, sorularınız için bize ulaşabilirsiniz.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== ZİYARET ========== -->
     <section class="section visit" id="ziyaret">
       <div class="container visit-grid">
@@ -261,12 +378,13 @@
         </div>
 
         <div class="visit-map reveal" style="--reveal-delay: 0.15s">
-          <iframe
-            src="https://maps.google.com/maps?q=Cumhuriyet%20Mahallesi%2014041.%20Sokak%20No%3A43AB%20Oniki%C5%9Fubat%20Kahramanmara%C5%9F&amp;z=16&amp;output=embed"
-            title="Maison Sara konumu — Google Haritalar"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen></iframe>
+          <button class="map-facade" type="button"
+                  data-map-src="https://maps.google.com/maps?q=Cumhuriyet%20Mahallesi%2014041.%20Sokak%20No%3A43AB%20Oniki%C5%9Fubat%20Kahramanmara%C5%9F&amp;z=16&amp;output=embed"
+                  data-map-title="Maison Sara konumu — Google Haritalar">
+            <span class="pin" aria-hidden="true">📍</span>
+            <span>Haritayı Görüntüle</span>
+            <small>Cumhuriyet Mah. 14041. Sk. No:43AB, Onikişubat</small>
+          </button>
         </div>
       </div>
     </section>
