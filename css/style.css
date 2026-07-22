@@ -432,6 +432,12 @@ section[id] {
   border-radius: 200px 200px 4px 4px;
 }
 
+/* Bölüm içi fotoğraflar */
+.gift-media { margin-top: 2.25rem; padding: 0 14px 14px 0; }
+.prose-media { margin: 2.25rem 0; padding: 0 14px 14px 0; }
+.visit-media { margin-bottom: 1.25rem; }
+.visit-media img { display: block; width: 100%; border-radius: 4px; }
+
 /* ---------- Hakkımızda ---------- */
 .about-grid {
   display: grid;
